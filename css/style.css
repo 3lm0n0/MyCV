@@ -526,6 +526,18 @@ bottom: -1.25rem;
     display: inline-block;
     margin: 4px;
 }
+.ojs {
+    background: url(../images/cakephp.png) no-repeat center center;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 50%;
+    min-height: 50%;
+    display: inline-block;
+    margin: 4px;
+}
 .jquery {
     background: url(../images/jquery.png) no-repeat center center;
     background-size: contain;
