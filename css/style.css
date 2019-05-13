@@ -38,7 +38,6 @@ button.danger:hover {background: #a00; border-color: #a00}
 .container {max-width: 960px; margin: 0 auto; width: 95%}
 .centered {text-align: center; padding-bottom: 3.75em}
 
-
 .cleft-wrapper {
 position: relative;
 top: -1.25rem;
@@ -291,7 +290,7 @@ bottom: -1.25rem;
    padding: 5px;
    display: inline-block;
    vertical-align: middle;
-
+    min-height: 200px;
  }
 .container .contact {
     text-align: center;
