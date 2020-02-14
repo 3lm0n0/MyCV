@@ -657,3 +657,23 @@ bottom: -1.25rem;
     display: inline-block;
     margin: 4px;
 }
+
+.download-container {
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+.download-button {
+  border-radius: 35px;
+  border-color: white;
+
+}
+.download-link {
+  font-family: lobster, sans-serif;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+
+}
