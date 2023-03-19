@@ -385,3 +385,8 @@ ul {
 .font-color-gray {
   color: #545151;
 }
+
+
+.inline-list-item {
+  display: inline list-item;
+}
