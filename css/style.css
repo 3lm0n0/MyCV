@@ -386,7 +386,10 @@ ul {
   color: #545151;
 }
 
-
 .inline-list-item {
   display: inline list-item;
+}
+
+.no-list-style {
+  list-style-type: none;
 }
