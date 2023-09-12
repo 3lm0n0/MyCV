@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Pedro Jose Bidoggia</title>
+  <link rel="shortcut icon" href="./assets/favicon.ico">
+  <meta content="Pedro Jose Bidoggia software development" name="description">
+  <meta content="Pedro Jose Bidoggia — software development" property="og:title">
+  <meta content="Pedro Jose Bidoggia software development" property="og:description">
+  <meta property="og:type" content="website">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="./assets/style.css" rel="stylesheet" type="text/css">
+  <script src="./assets/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({ google: { families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"] } });</script>
+  <script type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+  <style>
+    ::selection {
+      background-color: #EA622B;
+      color: #fff;
+      text-shadow: none;
+    }
+  </style>
+  <style>
+    /*!
+ * Accordion v3.1.1
+ * Simple accordion created in pure Javascript.
+ * https://github.com/michu2k/Accordion
+ *
+ * Copyright (c) Michał Strumpf
+ * Published under MIT License
+ */
+    .ac .ac-trigger {
+      cursor: pointer;
+      background-color: transparent;
+      -webkit-transition: color .4s ease;
+      transition: color .4s ease;
+      position: relative;
+    }
+
+    .ac .ac-panel {
+      overflow: visible;
+      -webkit-transition-property: height, visibility;
+      transition-property: height, visibility;
+      -webkit-transition-timing-function: ease;
+      transition-timing-function: ease;
+    }
+
+    .ac.js-enabled .ac-panel {
+      visibility: hidden;
+    }
+
+    .ac.is-active .ac-panel {
+      visibility: visible;
+    }
+  </style>
+</head>
+
+<body class="u-body">
+  <div style="padding: 1rem;">
+    <label class="switch">
+      <input type="checkbox" checked>
+      <span class="slider round"></span>
+    </label>
+    <p style="color: #000;">Change theme</p>
+  </div>
+  <div class="g-root w-embed">
+    <style>
+      @media (min-width: 3840px) {
+        :root {
+          font-size: .3472222222222222vw;
+        }
+      }
+
+      @media (max-width: 3839px) and (min-width: 1920px) {
+        :root {
+          font-size: .5208333333333333vw;
+        }
+      }
+
+      @media (max-width: 1919px) and (min-width: 1440px) {
+        :root {
+          font-size: .6944444444444444vw;
+        }
+      }
+
+      @media (max-width: 1439px) and (min-width: 992px) {
+        :root {
+          font-size: .7320644216691069vw;
+        }
+      }
+
+      @media (max-width: 991px) and (min-width: 480px) {
+        :root {
+          font-size: 1.3020833333333335vw;
+        }
+      }
+
+      @media (max-width: 479px) {
+        :root {
+          font-size: 2.666666666666667vw;
+        }
+      }
+    </style>
+  </div>
+  <div style="display: none;" class="c-loader">
+    <figure class="c-loader__item">
+      <div style="opacity: 1;" class="c-loader__item__emb w-embed">
+        <svg width="100%" height="100%" viewBox="0 0 317 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="b" d="M33.5297 25.4642C38.8017 25.4642 43.5816 26.6969 47.8695 29.1623C52.2276 31.5572 55.6368 34.9736 58.0971 39.4113C60.5573 43.7786 61.7874 48.8855 61.7874 54.7321C61.7874 60.5786 60.5573 65.7208 58.0971 70.1585C55.6368 74.5258 52.2276 77.9421 47.8695 80.4075C43.5816 82.8025 38.8017 84 33.5297 84C25.7272 84 19.7874 81.5346 15.7105 76.6038V83.1547H0V4.75472H16.4485V32.3321C20.5958 27.7535 26.2895 25.4642 33.5297 25.4642ZM30.6828 70.4755C34.9004 70.4755 38.3448 69.0667 41.0159 66.2491C43.7573 63.361 45.128 59.522 45.128 54.7321C45.128 49.9421 43.7573 46.1384 41.0159 43.3208C38.3448 40.4327 34.9004 38.9887 30.6828 38.9887C26.4653 38.9887 22.9858 40.4327 20.2443 43.3208C17.5732 46.1384 16.2377 49.9421 16.2377 54.7321C16.2377 59.522 17.5732 63.361 20.2443 66.2491C22.9858 69.0667 26.4653 70.4755 30.6828 70.4755Z" fill="white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;"> </path>
+          <path class="r" d="M84.2913 33.8113C86.2595 31.0642 88.8955 28.9862 92.1993 27.5774C95.5733 26.1686 99.4394 25.4642 103.798 25.4642V40.6792C101.97 40.5384 100.74 40.4679 100.107 40.4679C95.3976 40.4679 91.7072 41.8063 89.0361 44.483C86.365 47.0893 85.0294 51.034 85.0294 56.317V83.1547H68.5809V26.3094H84.2913V33.8113Z" fill="white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;"> </path>
+          <path class="a-1" d="M131.932 25.4642C140.718 25.4642 147.466 27.5774 152.176 31.8038C156.886 35.9598 159.241 42.2642 159.241 50.717V83.1547H143.846V76.0755C140.754 81.3585 134.99 84 126.554 84C122.196 84 118.4 83.2604 115.167 81.7811C112.004 80.3019 109.579 78.2591 107.892 75.6528C106.205 73.0465 105.361 70.0881 105.361 66.7774C105.361 61.4943 107.329 57.3384 111.266 54.3094C115.272 51.2805 121.423 49.766 129.718 49.766H142.792C142.792 46.1736 141.702 43.4264 139.523 41.5245C137.344 39.5522 134.076 38.566 129.718 38.566C126.695 38.566 123.708 39.0591 120.755 40.0453C117.873 40.961 115.413 42.2289 113.374 43.8491L107.47 32.3321C110.563 30.1484 114.253 28.4579 118.541 27.2604C122.899 26.0629 127.363 25.4642 131.932 25.4642ZM130.666 72.9057C133.478 72.9057 135.974 72.2717 138.153 71.0038C140.332 69.6654 141.878 67.7283 142.792 65.1925V59.3811H131.51C124.762 59.3811 121.388 61.6 121.388 66.0377C121.388 68.1509 122.196 69.8415 123.813 71.1094C125.5 72.3069 127.784 72.9057 130.666 72.9057Z" fill="white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;"> </path>
+          <path class="d" d="M228.308 4.75472V83.1547H212.598V76.6038C208.521 81.5346 202.616 84 194.884 84C189.542 84 184.692 82.8025 180.333 80.4075C176.045 78.0126 172.671 74.5962 170.211 70.1585C167.751 65.7208 166.521 60.5786 166.521 54.7321C166.521 48.8855 167.751 43.7434 170.211 39.3057C172.671 34.8679 176.045 31.4516 180.333 29.0566C184.692 26.6616 189.542 25.4642 194.884 25.4642C202.124 25.4642 207.783 27.7535 211.86 32.3321V4.75472H228.308ZM197.731 70.4755C201.878 70.4755 205.322 69.0667 208.064 66.2491C210.805 63.361 212.176 59.522 212.176 54.7321C212.176 49.9421 210.805 46.1384 208.064 43.3208C205.322 40.4327 201.878 38.9887 197.731 38.9887C193.513 38.9887 190.034 40.4327 187.292 43.3208C184.551 46.1384 183.18 49.9421 183.18 54.7321C183.18 59.522 184.551 63.361 187.292 66.2491C190.034 69.0667 193.513 70.4755 197.731 70.4755Z" fill="white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;"> </path>
+          <path class="i" d="M239.314 26.3094H255.763V83.1547H239.314V26.3094ZM247.539 18.3849C244.516 18.3849 242.056 17.5044 240.158 15.7434C238.26 13.9824 237.311 11.7987 237.311 9.19245C237.311 6.58616 238.26 4.40252 240.158 2.64151C242.056 0.880504 244.516 0 247.539 0C250.561 0 253.021 0.845285 254.919 2.53585C256.817 4.22642 257.766 6.33963 257.766 8.87548C257.766 11.6226 256.817 13.912 254.919 15.7434C253.021 17.5044 250.561 18.3849 247.539 18.3849Z" fill="white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;"> </path>
+          <path class="a-2" d="M289.691 25.4642C298.478 25.4642 305.226 27.5774 309.936 31.8038C314.645 35.9598 317 42.2642 317 50.717V83.1547H301.606V76.0755C298.513 81.3585 292.749 84 284.314 84C279.956 84 276.16 83.2604 272.926 81.7811C269.763 80.3019 267.338 78.2591 265.651 75.6528C263.964 73.0465 263.121 70.0881 263.121 66.7774C263.121 61.4943 265.089 57.3384 269.025 54.3094C273.032 51.2805 279.182 49.766 287.477 49.766H300.551C300.551 46.1736 299.462 43.4264 297.283 41.5245C295.104 39.5522 291.835 38.566 287.477 38.566C284.454 38.566 281.467 39.0591 278.515 40.0453C275.633 40.961 273.172 42.2289 271.134 43.8491L265.229 32.3321C268.322 30.1484 272.013 28.4579 276.3 27.2604C280.659 26.0629 285.122 25.4642 289.691 25.4642ZM288.426 72.9057C291.238 72.9057 293.733 72.2717 295.912 71.0038C298.091 69.6654 299.638 67.7283 300.551 65.1925V59.3811H289.269C282.521 59.3811 279.147 61.6 279.147 66.0377C279.147 68.1509 279.956 69.8415 281.572 71.1094C283.259 72.3069 285.544 72.9057 288.426 72.9057Z" fill="white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;"> </path>
+        </svg>
+      </div>
+      <div class="b u-none" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;"> </div>
+      <div class="r u-none" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;"> </div>
+      <div class="a-1 u-none" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;"> </div>
+      <div class="d u-none" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;"> </div>
+      <div class="i u-none" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;"> </div>
+      <div class="a-2 u-none" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;"> </div>
+    </figure>
+    <div style="opacity: 1;" class="c-loader__target"></div>
+  </div>
+  <main id="main" style="opacity: 1;" class="o-page">
+    <header class="o-section wf-section">
+      <div class="o-container w-container">
+        <nav class="c-nav">
+          <div class="c-nav__container">
+            <figure class="c-nav__logo">
+              <div class="c-nav__logo__emb w-embed">
+                <img alt=">_3lm0n0" style="border-radius: 50%;" src="./assets/3lm0n0-transformed.png">
+              </div>
+            </figure>
+            <a href="#contact" class="c-nav__cta w-inline-block">
+              <div class="c-nav__cta__infos-wrap">
+                <div class="c-nav__cta__infos-txt">
+                  <div class="o-cta-txt u-hover-anim">Contact</div>
+                </div>
+                <figure class="c-nav__cta__infos-ico sm--none">
+                  <div class="c-nav__cta__infos-ico-wrap">
+                    <div class="c-nav__cta__infos-ico__emb w-embed">
+                      <svg width="100%" height="100%" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.7071 7.29289C17.0976 7.68342 17.0976 8.31658 16.7071 8.70711L10.3431 15.0711C9.95262 15.4616 9.31946 15.4616 8.92893 15.0711C8.53841 14.6805 8.53841 14.0474 8.92893 13.6569L14.5858 8L8.92893 2.34315C8.53841 1.95262 8.53841 1.31946 8.92893 0.928931C9.31946 0.538407 9.95262 0.538407 10.3431 0.928931L16.7071 7.29289ZM-8.74228e-08 7L16 7L16 9L8.74228e-08 9L-8.74228e-08 7Z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="c-nav__cta__infos-ico-wrap u-hover" style="transform: translate3d(-100%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                    <div class="c-nav__cta__infos-ico__emb w-embed">
+                      <svg width="100%" height="100%" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.7071 7.29289C17.0976 7.68342 17.0976 8.31658 16.7071 8.70711L10.3431 15.0711C9.95262 15.4616 9.31946 15.4616 8.92893 15.0711C8.53841 14.6805 8.53841 14.0474 8.92893 13.6569L14.5858 8L8.92893 2.34315C8.53841 1.95262 8.53841 1.31946 8.92893 0.928931C9.31946 0.538407 9.95262 0.538407 10.3431 0.928931L16.7071 7.29289ZM-8.74228e-08 7L16 7L16 9L8.74228e-08 9L-8.74228e-08 7Z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div class="c-nav__cta__target"></div>
+              <div class="c-nav__cta__hover" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </div>
+            </a>
+          </div>
+        </nav>
+        <div class="o-l539 is--mt-125--z-4 md--mt-48 sm--100">
+          <h2 class="o-h-45">
+            <span data-w-id="429a5da8-50ba-b11a-203d-1f3fd4ec93ca" style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;" class="u-suline-h45-1 is--orange">Pedro Jose Bidoggia</span>
+            <span data-w-id="589ed387-d4b3-bd3a-729c-6e5ac5b5b23f" style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;" class="u-suline-h45-2">Software Engineer</span>
+          </h2>
+          <div class="o-flex-ss is--mt-44 md--mt-32">
+            <figure data-w-id="4f858fbc-a7b2-208f-dd57-c68002294214" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;" class="c-p-baseline">
+            </figure>
+            <div class="o-l368 sm--100">
+              <p class="o-txt-16">
+                Software development is more than just code;
+                it's a practical form of art that generates tangible transformations in how we work and live.
+                The collaborative nature of software development is what truly sets it apart.
+                The synergy of minds coming together to create something greater than the sum of its parts is an
+                incredible experience.
+              </p>
+            </div>
+          </div>
+          <div class="o-layout is--mt-56--ml-71--lh-1 md--mt-48--ml-88 sm--ml-0">
+            <span href="#form" data-w-id="e63d9a62-12be-1e2f-6f60-f2d9fba372e8" style="opacity: 1; transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;" class="c-cta w-inline-block">
+              <div class="c-cta__target" style="background-color: #fff;"></div>
+              <div class="c-cta__target__hover" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></div>
+              <div class="c-cta__infos">
+                <figure class="c-cta__infos__img">
+                  <img loading="eager" alt="" class="o-img is--cover" width="40" src="./assets/png-transparent-astronauts-from-space-astronaut-spacewalk-un.png">
+                </figure>
+                <div class="o-cta-txt u-hover-anim" style="color: #000;">Hello world!</div>
+              </div>
+            </span>
+          </div>
+        </div>
+        <figure class="c-header-infos-img">
+          <img loading="lazy" style="opacity: 1; transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;" data-w-id="dba4a6da-f4fc-ef53-1919-86a32a91a110" sizes="(max-width: 991px) 100vw, 67vw" alt="" class="o-img" src="./assets/cv-my-pic.png" srcset="./assets/cv-my-pic.png 1x">
+          <figure data-w-id="92cafa11-c1a2-7a01-2afb-9ba27ce2d09a" style="top: 28.4rem;transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;/*! border-radius: 50%; *//*! border-radius: 50%; */" class="c-header-infos-img__controls">
+            <img loading="lazy" alt="" class="c-header-infos-img__controls__item" style="/*! border-radius: 50%; */border-radius: 50%;" src="./assets/rocket-launch-start-up-symbol-png.webp">
+          </figure>
+          <figure data-w-id="ca7ba947-b1c8-e26c-6de5-c5a7a342bc3e" style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;" class="c-header-infos-img__numbers">
+            <img loading="lazy" alt="" class="c-header-infos-img__numbers__item" style="border-radius: 50%;" src="./assets/6200_2_08-transformed.png">
+          </figure>
+          <figure data-w-id="bb91952b-3eb0-a33e-dc14-555d76adf097" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;" class="c-header-infos-img__message">
+            <img loading="lazy" alt="" class="c-header-infos-img__message__item" src="./assets/idea.svg">
+          </figure>
+          <figure data-w-id="660a7928-8811-1247-b795-0dd74588f315" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;" class="c-header-infos-ico__new">
+            <img src="./assets/60c0d7a6a3c7a56a7577d356_new.svg" loading="lazy" alt="" class="o-img">
+          </figure>
+          <figure data-w-id="2512983e-6c41-b802-7678-1f4761985429" style="opacity: 1;" class="c-header-curv-line-1">
+          </figure>
+          <figure data-w-id="6851b52b-27c6-8614-efde-102c394e2814" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;" class="c-header-infos-ico__bell">
+            <img src="./assets/60c0d7a6a3c7a5025077d353_ring.svg" loading="lazy" alt="" class="o-img">
+          </figure>
+          <figure data-w-id="736fa0c4-57d6-dc27-7599-a5fb7afb9acd" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;" class="c-header-infos-ico__sms">
+            <img src="./assets/coding.webp" loading="lazy" alt="" class="o-img">
+          </figure>
+          <figure data-w-id="8e73004c-41c9-b4c4-5b45-d4f1e87ddbe6" style="opacity: 1;" class="c-header-curv-line-2">
+          </figure>
+          <figure data-w-id="18848a10-2f61-1594-9cad-7cb17ea5bdc2" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;" class="c-header-infos-ico__talk">
+            <img src="./assets/60c0d7a6a3c7a582b677d374_chat.svg" loading="lazy" alt="" class="o-img">
+          </figure>
+          <figure data-w-id="5a69fce4-cb62-d748-396e-f8df62a434eb" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;" class="c-header-infos-ico__copy">
+            <img src="./assets/60c0d7a6a3c7a55fe777d379_document-1.svg" loading="lazy" alt="" class="o-img">
+          </figure>
+          <div data-w-id="4851708c-fb52-d9ca-6dd0-b249a9b00761" style="opacity: 1;" class="c-header-curv-line-3"></div>
+          <figure data-w-id="f7e241b5-c363-7516-8759-6c04a06bbc7d" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;" class="c-header-infos-ico__money">
+            <img src="./assets/60c0d7a6a3c7a59c2277d35e_money.svg" loading="lazy" alt="" class="o-img">
+          </figure>
+        </figure>
+        <div class="c-header-pls">
+          <figure data-w-id="0d351c42-cf31-90cd-066f-c0d6993db3b0" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 0.1; transform-style: preserve-3d;" class="c-header-pls__target-1"></figure>
+          <figure data-w-id="601d7219-062e-f91b-374c-f52ea02377a0" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 0.16; transform-style: preserve-3d;" class="c-header-pls__target-2"></figure>
+          <figure data-w-id="f6a13693-70ed-e942-c962-d87cf23f3dd4" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 0.3; transform-style: preserve-3d;" class="c-header-pls__target-3"></figure>
+          <figure data-w-id="24dd85d8-a683-4eae-0704-d190b95bc24c" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 0.8; transform-style: preserve-3d;" class="c-header-pls__target-4"></figure>
+        </div>
+      </div>
+    </header>
+    <section class="o-section is--mt-160--z-3 md--mt-0 wf-section">
+      <div class="o-container is--py-72 md--py-64 sm--py-56 w-container">
+        <figure class="c-rndrec"></figure>
+        <div class="o-flex-ss is--ml-80 md--grid--ml-64 sm--obo">
+          <article class="o-layout">
+            <div class="c-pls-ico u-anim sm">
+              <figure class="c-pls-ico__infos" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <img src="./assets/infinite-transformed.png" loading="eager" alt="" class="o-img" width="19">
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></figure>
+            </div>
+            <div class="o-l191 is--mt-32 md--mt-24">
+              <h3 class="o-h-18">Iterative Growth</h3>
+            </div>
+            <div class="o-l229 is--mt-16 md--auto">
+              <p class="o-txt-14 u-anim">
+                My personal development journey shares a parallel with software development in its iterative nature.
+                Just as code
+                undergoes continuous refinement, me too engage in a series of ongoing steps and experiences that
+                contribute to my
+                growth and learning. Each phase builds upon the previous, shaping me into an increasingly refined and
+                capable
+                individual.
+              </p>
+            </div>
+          </article>
+          <article class="o-layout is--ml-121 md--ml-0">
+            <div class="c-pls-ico u-anim sm">
+              <figure class="c-pls-ico__infos" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <img src="./assets/60c0d7a6a3c7a53b8677d349_networking-ico.svg" loading="eager" alt="" class="o-img" width="20">
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></figure>
+            </div>
+            <div class="o-l218 is--mt-32 md--mt-24">
+              <h3 class="o-h-18">Collaborative Spirit</h3>
+            </div>
+            <div class="o-l309 is--mt-16 md--auto">
+              <p class="o-txt-14 u-anim">
+                My Interactions and relationships with others highlight a collaborative nature. Whether it's in
+                professional settings,
+                social circles, or personal endeavors, I thrive in environments that encourage the exchange of ideas and
+                mutual
+                support. This collaborative spirit empowers me to harness the collective strength of a team and achieve
+                shared goals.
+              </p>
+            </div>
+          </article>
+          <article class="o-layout is--ml-85 md--ml-0">
+            <div class="c-pls-ico u-anim sm">
+              <figure class="c-pls-ico__infos" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <img src="./assets/Atom_1.0_icon.png" loading="eager" alt="" class="o-img" width="20">
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"> </figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"> </figure>
+            </div>
+            <div class="o-l228 is--mt-32 md--mt-24">
+              <h3 class="o-h-18">Dynamic Adaptability</h3>
+            </div>
+            <div class="o-l281 is--mt-16 md--auto">
+              <p class="o-txt-14 u-anim">
+                Much like the dynamic world of software, my approach to life is characterized by adaptability. I embrace
+                change and
+                eagerly explore new opportunities and experiences. This agility allows me to readily integrate new
+                knowledge and
+                skills, ensuring that I remain at the forefront of personal development and readily tackle evolving
+                challenges.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="o-section is--mt-194 md--mt-128 sm--mt-96 wf-section">
+      <div class="o-container w-container">
+        <div class="o-l411 is--centered sm--100">
+          <h2 class="o-h-40 is--centered">
+            <span class="o-h-40--orange">Experience</span>
+          </h2>
+          <h3 class="o-h-40 is--centered">Projects, I have worked on.</h3>
+        </div>
+        <div class="o-flex-ssbw is--mt-32 md--mt-24--obo">
+          <article class="o-layout is--pt-78--pl-53 md--pt-pl-64 sm--pt-56--pl-0">
+            <div class="c-pls-ico is--abs-tl--z-3 u-anim sm">
+              <figure class="c-pls-ico__infos is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <img src="./assets/present.png" loading="eager" alt="" class="o-img" width="20.5">
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></figure>
+            </div>
+            <div class="c-pls-plate is--left md--mb-0 sm">
+              <div class="c-pls-plate__target"></div>
+              <div class="c-pls-plate__infos-wrapper">
+                <h3 class="o-h-16">
+                  <span class="o-h-40--orange">Present</span> – Software Engineer, Freelancer, Entrepreneur
+                </h3>
+                <div class="o-layout is--mt-16">
+                  <p class="o-txt-12 u-anim">Standardize, improve and automate processes through software development.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <figure class="c-pls-curv-1"></figure>
+          <article class="o-layout is--pt-78--pr-53--mt-128 md--mt-n64--py-invert sm--pt-56--pl-0">
+            <div class="c-pls-ico is--abs-tr--z-3 u-anim md--lt sm">
+              <figure class="c-pls-ico__infos is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <p style="text-align: center;color: #EA622B;font-size: 5rem;">+</p>
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></figure>
+            </div>
+            <div class="c-pls-plate is--right md--py-invert sm">
+              <div class="c-pls-plate__target"></div>
+              <div class="c-pls-plate__infos-wrapper">
+                <h3 class="o-h-16">
+                  <span class="o-h-40--orange">2018 to 2022 </span> – Software Engineer
+                </h3>
+                <h3 class="o-h-16">Digital House</h3>
+                <div class="o-layout is--mt-16">
+                  <p class="o-txt-12 u-anim">
+                    Golang Microservices at AWS.
+                  </p>
+                  <p class="o-txt-12 u-anim">
+                    PHP (laravel) Monoliths at AWS.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <figure class="c-pls-curv-2"></figure>
+        </div>
+        <div class="o-flex-ssbw is--mt-n78 md--mt-n64--obo sm--mt-n72">
+          <article class="o-layout is--pt-78--pl-53 md--pt-pl-64 sm--pt-56--pl-0">
+            <div class="c-pls-ico is--abs-tl--z-3 u-anim sm">
+              <figure class="c-pls-ico__infos is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <p style="text-align: center;color: #EA622B;font-size: 5rem;">+</p>
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></figure>
+            </div>
+            <div class="c-pls-plate is--left md--mb-0 sm">
+              <div class="c-pls-plate__target"></div>
+              <div class="c-pls-plate__infos-wrapper">
+                <h3 class="o-h-16"><span class="o-h-40--orange">2022</span> – Instructor</h3>
+                <h3 class="o-h-16">Digital House</h3>
+                <div class="o-layout is--mt-16">
+                  <p class="o-txt-12 u-anim">NodeJs for beginners.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <figure class="c-pls-curv-1"></figure>
+          <article class="o-layout is--pt-78--pr-53--mt-128 md--mt-n64--py-invert sm--pt-56--pl-0">
+            <div class="c-pls-ico is--abs-tr--z-3 u-anim md--lt sm">
+              <figure class="c-pls-ico__infos is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <p style="text-align: center;color: #EA622B;font-size: 5rem;">+</p>
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></figure>
+            </div>
+            <div class="c-pls-plate is--right md--py-invert sm">
+              <div class="c-pls-plate__target"></div>
+              <div class="c-pls-plate__infos-wrapper">
+                <h3 class="o-h-16"><span class="o-h-40--orange">2018 to 2019 </span> – Instructor</h3>
+                <h3 class="o-h-16">Digital House</h3>
+                <div class="o-layout is--mt-16">
+                  <p class="o-txt-12 u-anim">Digital House &amp; World Bank Scholarships, JavaScript for beginners.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <figure class="c-pls-curv-2"></figure>
+        </div>
+        <div class="o-flex-ssbw is--mt-n78 md--mt-n64--obo sm--mt-n72">
+          <article class="o-layout is--pt-78--pl-53 md--pt-pl-64 sm--pt-56--pl-0">
+            <div class="c-pls-ico is--abs-tl--z-3 u-anim sm">
+              <figure class="c-pls-ico__infos is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <p style="text-align: center;color: #EA622B;font-size: 5rem;">+</p>
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></figure>
+            </div>
+            <div class="c-pls-plate is--left md--mb-0 sm">
+              <div class="c-pls-plate__target"></div>
+              <div class="c-pls-plate__infos-wrapper">
+                <h3 class="o-h-16"><span class="o-h-40--orange">2018</span> – Software Engineer</h3>
+                <h3 class="o-h-16">UNTREF (Universidad Nacional Tres de Febrero)</h3>
+                <div class="o-layout is--mt-16">
+                  <p class="o-txt-12 u-anim">Web application with PHP (laravel).</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <figure class="c-pls-curv-1"></figure>
+          <article class="o-layout is--pt-78--pr-53--mt-128 md--mt-n64--py-invert sm--pt-56--pl-0">
+            <div class="c-pls-ico is--abs-tr--z-3 u-anim md--lt sm">
+              <figure class="c-pls-ico__infos is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <p style="text-align: center;color: #EA622B;font-size: 5rem;">+</p>
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+            </div>
+            <div class="c-pls-plate is--right md--py-invert sm">
+              <div class="c-pls-plate__target"></div>
+              <div class="c-pls-plate__infos-wrapper">
+                <h3 class="o-h-16"><span class="o-h-40--orange">2015 to 2018</span> – RPA Software Engineer</h3>
+                <h3 class="o-h-16">Accenture</h3>
+                <div class="o-layout is--mt-16">
+                  <p class="o-txt-12 u-anim">Developer at the Automation Team. Instructor of MS Excel and Visual Basic
+                    for
+                    Applications.
+                    Role: Standarize, improve and automate financial, accounting &amp; HHRR processes.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <figure class="c-pls-curv-2"></figure>
+        </div>
+        <div class="o-flex-ssbw is--mt-n78 md--mt-n64--obo sm--mt-n72">
+          <article class="o-layout is--pt-78--pl-53 md--pt-pl-64 sm--pt-56--pl-0">
+            <div class="c-pls-ico is--abs-tl--z-3 u-anim sm">
+              <figure class="c-pls-ico__infos is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <p style="text-align: center;color: #EA622B;font-size: 5rem;">+</p>
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+            </div>
+            <div class="c-pls-plate is--left md--mb-0 sm">
+              <div class="c-pls-plate__target"></div>
+              <div class="c-pls-plate__infos-wrapper">
+                <h3 class="o-h-16"><span class="o-h-40--orange">2017</span> – RPA Engineer</h3>
+                <h3 class="o-h-16">Accenture Santiago, Chile</h3>
+                <div class="o-layout is--mt-16">
+                  <p class="o-txt-12 u-anim">Project to automate a process of accounts payable to a mining company.
+                    Three weeks in Chile, then we continued from
+                    Argentina.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <figure class="c-pls-curv-1"></figure>
+          <article class="o-layout is--pt-78--pr-53--mt-128 md--mt-n64--py-invert sm--pt-56--pl-0">
+            <div class="c-pls-ico is--abs-tr--z-3 u-anim md--lt sm">
+              <figure class="c-pls-ico__infos is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <p style="text-align: center;color: #EA622B;font-size: 5rem;">+</p>
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+            </div>
+            <div class="c-pls-plate is--right md--py-invert sm">
+              <div class="c-pls-plate__target"></div>
+              <div class="c-pls-plate__infos-wrapper">
+                <h3 class="o-h-16"><span class="o-h-40--orange">2017</span> – RPA Instructor</h3>
+                <h3 class="o-h-16">Accenture Belo Horizonte, Minas Gerais, Brazil</h3>
+                <div class="o-layout is--mt-16">
+                  <p class="o-txt-12 u-anim">RPA (Robotic Process Automation) Instructor, three days presencial course.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <figure class="c-pls-curv-2"></figure>
+        </div>
+        <div class="o-flex-ssbw is--mt-n78 md--mt-n64--obo sm--mt-n72">
+          <article class="o-layout is--pt-78--pl-53 md--pt-pl-64 sm--pt-56--pl-0">
+            <div class="c-pls-ico is--abs-tl--z-3 u-anim sm">
+              <figure class="c-pls-ico__infos is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <p style="text-align: center;color: #EA622B;font-size: 5rem;">+</p>
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+            </div>
+            <div class="c-pls-plate is--left md--mb-0 sm">
+              <div class="c-pls-plate__target"></div>
+              <div class="c-pls-plate__infos-wrapper">
+                <h3 class="o-h-16"><span class="o-h-40--orange">2017</span> – Software Engineer</h3>
+                <h3 class="o-h-16">Freelancer</h3>
+                <div class="o-layout is--mt-16">
+                  <p class="o-txt-12 u-anim">Web applications.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <figure class="c-pls-curv-1"></figure>
+          <article class="o-layout is--pt-78--pr-53--mt-128 md--mt-n64--py-invert sm--pt-56--pl-0">
+            <div class="c-pls-ico is--abs-tr--z-3 u-anim md--lt sm">
+              <figure class="c-pls-ico__infos is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <p style="text-align: center;color: #EA622B;font-size: 5rem;">+</p>
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+            </div>
+            <div class="c-pls-plate is--right md--py-invert sm">
+              <div class="c-pls-plate__target"></div>
+              <div class="c-pls-plate__infos-wrapper">
+                <h3 class="o-h-16"><span class="o-h-40--orange">2014 to 2015</span> – Outsourcing Operations & RPA</h3>
+                <h3 class="o-h-16">Accenture</h3>
+                <div class="o-layout is--mt-16">
+                  <p class="o-txt-12 u-anim">Accounting Analyst in Order to cash, Management service, Reporting & also,
+                    at the Automation Team. Instructor of MS
+                    Excel and Visual Basic for Applications.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <figure class="c-pls-curv-2"></figure>
+        </div>
+        <div class="o-flex-ssbw is--mt-n78 md--mt-n64--obo sm--mt-n72">
+          <article class="o-layout is--pt-78--pl-53 md--pt-pl-64 sm--pt-56--pl-0">
+            <div class="c-pls-ico is--abs-tl--z-3 u-anim sm">
+              <figure class="c-pls-ico__infos is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <p style="text-align: center;color: #EA622B;font-size: 5rem;">+</p>
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+            </div>
+            <div class="c-pls-plate is--left md--mb-0 sm">
+              <div class="c-pls-plate__target"></div>
+              <div class="c-pls-plate__infos-wrapper">
+                <h3 class="o-h-16"><span class="o-h-40--orange">2012 to 2014</span> – Software Engineer</h3>
+                <h3 class="o-h-16">Accenture</h3>
+                <div class="o-layout is--mt-16">
+                  <p class="o-txt-12 u-anim">Accounting Analyst in Hydrocarbon Value Chain, at the Balance Sheet
+                    Integrity team & also, at the Automation Team.
+                    Instructor of MS Excel and Visual Basic for Applications.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <figure class="c-pls-curv-1"></figure>
+          <article class="o-layout is--pt-78--pr-53--mt-128 md--mt-n64--py-invert sm--pt-56--pl-0">
+            <div class="c-pls-ico is--abs-tr--z-3 u-anim md--lt sm">
+              <figure class="c-pls-ico__infos is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <p style="text-align: center;color: #EA622B;font-size: 5rem;">+</p>
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+            </div>
+            <div class="c-pls-plate is--right md--py-invert sm">
+              <div class="c-pls-plate__target"></div>
+              <div class="c-pls-plate__infos-wrapper">
+                <h3 class="o-h-16"><span class="o-h-40--orange">2009</span> – Consulting</h3>
+                <h3 class="o-h-16">MF Consultores</h3>
+                <div class="o-layout is--mt-16">
+                  <p class="o-txt-12 u-anim">Business process management.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <figure class="c-pls-curv-2"></figure>
+        </div>
+        <div class="o-flex-ssbw is--mt-n78 md--mt-n64--obo sm--mt-n72">
+          <article class="o-layout is--pt-78--pl-53 md--pt-pl-64 sm--pt-56--pl-0">
+            <div class="c-pls-ico is--abs-tl--z-3 u-anim sm">
+              <figure class="c-pls-ico__infos is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;">
+                <figure class="c-pls-ico__infos__item">
+                  <p style="text-align: center;color: #EA622B;font-size: 5rem;">+</p>
+                </figure>
+              </figure>
+              <figure class="c-pls-ico__target-1" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+              <figure class="c-pls-ico__target-2" style="opacity: 0.15; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              </figure>
+            </div>
+            <div class="c-pls-plate is--left md--mb-0 sm">
+              <div class="c-pls-plate__target"></div>
+              <div class="c-pls-plate__infos-wrapper">
+                <h3 class="o-h-16"><span class="o-h-40--orange">2005 to 2012</span> – Real State Administration</h3>
+                <h3 class="o-h-16">Accenture</h3>
+                <div class="o-layout is--mt-16">
+                  <p class="o-txt-12 u-anim">At Own Business. Administration, refurbishment & remodeling..</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="o-section is--mt-178 md--mt-128 sm--mt-96 wf-section">
+      <div class="o-layout is--mt-n71--pt-100--pb-80--pl-80--z-4 u-overflow md--p-64--mt-0 sm--px-0--py-48">
+        <div class="c-rec-bg-white"></div>
+        <div class=" sm--auto">
+          <div class="o-flex-cs">
+            <figure class="c-star-ico">
+              <div class="c-star-ico__emb w-embed">
+                <svg width="100%" height="100%" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.0198 4.26741C11.9407 4.02876 11.7252 3.85981 11.4713 3.83724L8.00721 3.52837L6.6382 0.380532C6.53712 0.149263 6.30714 0 6.05115 0C5.79517 0 5.56509 0.149263 5.46466 0.380532L4.09565 3.52837L0.631059 3.83724C0.377087 3.86026 0.162027 4.02921 0.0825578 4.26741C0.00354657 4.50605 0.0765152 4.7678 0.268596 4.93325L2.88714 7.18829L2.11506 10.528C2.05857 10.7736 2.15562 11.0275 2.36308 11.1748C2.47459 11.2544 2.60561 11.2941 2.73708 11.2941C2.85006 11.2941 2.96313 11.2646 3.06411 11.2053L6.05115 9.45116L9.03765 11.2053C9.25674 11.3339 9.53223 11.3221 9.73923 11.1748C9.94669 11.0275 10.0437 10.7736 9.98725 10.528L9.21517 7.18829L11.8337 4.93325C12.0257 4.7678 12.0988 4.50659 12.0198 4.26741Z" fill="#C0C7CD"></path>
+                </svg>
+              </div>
+            </figure>
+            <h4 class="o-h-12">Continous improvment</h4>
+          </div>
+          <div class="o-layout is--mt-16">
+            <h2 class="o-h-40"><span class="o-h-40--orange">Studies</span> <br>Always learnig something new.</h2>
+          </div>
+          <div class="o-flex-ss is--mt-44 md--mt-32">
+            <figure class="c-p-baseline"></figure>
+            <div class="">
+              <p class="" style="padding-right: 5rem;">
+                Although I will list some formal studies below,
+                in the ever-evolving realm of software development, progress is the constant heartbeat. It's a dynamic
+                process, a
+                journey where code transforms and adapts, pushing boundaries and redefining possibilities. To keep pace
+                with this
+                relentless evolution, we find ourselves immersed in a perpetual cycle of study and adaptation. Staying
+                at the forefront
+                of technology is not merely a choice, but a necessity. It demands a commitment to learning, a hunger for
+                innovation, and
+                a keen awareness of emerging trends. This dedication ensures that we not only harness the power of
+                current technologies
+                but also anticipate the shape of things to come. In this landscape, staying stagnant is not an option;
+                it's the momentum
+                of progress that propels us forward, driving the software industry towards new horizons.
+              </p>
+            </div>
+          </div>
+        <div class="c-testemonials-slider-wrapper">
+          <figure class="c-testemonials-slider-bg"></figure>
+          <div class="swiper-container c-testemonials-slider swiper-initialized swiper-horizontal swiper-backface-hidden">
+            <div class="swiper-wrapper" style="cursor: grab;" id="swiper-wrapper-f73db2557d610e644" aria-live="polite">
+              <article class="swiper-slide c-testemonials-slider__slide swiper-slide-active" style="width: 531px; margin-right: 200px;" role="group" aria-label="1 / 4" data-swiper-slide-index="0">
+                <div class="o-flex-cs">
+                  <figure class="c-testemonials-slider__hero-img">
+                    <img src="./assets/dh.png" loading="eager" alt="" class="o-img" width="64.5">
+                  </figure>
+                  <div class="c-testemonials-slider__hero-infos">
+                    <div class="o-txt-18">Full stack web programming</div>
+                    <div class="o-txt-16 is--bold">2016 – Digital House</div>
+                  </div>
+                </div>
+                <div class="o-l500 is--mt-40 md--mt-32 sm--auto">
+                  <p class="o-txt-16">
+                    Full stack web programming. Languages: HTML5, CSS3, Javascript, AJAX, PHP, MySQL, Laravel, SASS. Working methodology: SCRUM.
+                  </p>
+                </div>
+              </article>
+              <article class="swiper-slide c-testemonials-slider__slide swiper-slide-next" style="width: 531px; margin-right: 200px;" role="group" aria-label="2 / 4" data-swiper-slide-index="1">
+                <div class="o-flex-cs">
+                  <figure class="c-testemonials-slider__hero-img">
+                    <img src="./assets/itcollege.png" loading="eager" alt="" class="o-img" width="64.5">
+                  </figure>
+                  <div class="c-testemonials-slider__hero-infos">
+                    <div class="o-txt-18">Front end web programming</div>
+                    <div class="o-txt-16 is--bold">2015 – IT College</div>
+                  </div>
+                </div>
+                <div class="o-l500 is--mt-40 md--mt-32 sm--auto">
+                  <p class="o-txt-16">
+                    Front end web programming. Languages: HTML5, CSS3 y Javascript.
+                  </p>
+                </div>
+              </article>
+              <article class="swiper-slide c-testemonials-slider__slide" style="width: 531px; margin-right: 200px;" role="group" aria-label="3 / 4" data-swiper-slide-index="2">
+                <div class="o-flex-cs">
+                  <figure class="c-testemonials-slider__hero-img">
+                    <img src="./assets/uca.png" loading="eager" alt="" class="o-img" width="64.5">
+                  </figure>
+                  <div class="c-testemonials-slider__hero-infos">
+                    <div class="o-txt-18">Business Administration</div>
+                    <div class="o-txt-16 is--bold">2005 to 2011 – Pontificia Universidad Católica Argentina (U.C.A.)</div>
+                  </div>
+                </div>
+                <div class="o-l500 is--mt-40 md--mt-32 sm--auto">
+                  <p class="o-txt-16">
+                    Business Administration. 75 % approved of the career.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="o-flex-csbw is--mt-64 md--mt-48">
+              <div class="o-flex-cs">
+                <div class="swiper-button-prev c-testemonials-slider__bttn-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-f73db2557d610e644">
+                  <div class="c-testemonials-slider__bttn__target" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></div>
+                  <figure class="c-testemonials-slider__bttn__ico">
+                    <div class="c-testemonials-slider__bttn__ico__emb w-embed">
+                      <svg width="100%" height="100%" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.34404 7.29381C-0.046484 7.68433 -0.046484 8.3175 0.34404 8.70802L6.708 15.072C7.09853 15.4625 7.73169 15.4625 8.12221 15.072C8.51274 14.6815 8.51274 14.0483 8.12221 13.6578L2.46536 8.00091L8.12222 2.34406C8.51274 1.95354 8.51274 1.32037 8.12222 0.929847C7.73169 0.539322 7.09853 0.539322 6.708 0.929847L0.34404 7.29381ZM20.0511 7.00092L1.05115 7.00091L1.05115 9.00091L20.0511 9.00092L20.0511 7.00092Z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                  </figure>
+                </div>
+                <div class="swiper-button-next c-testemonials-slider__bttn-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-f73db2557d610e644">
+                  <div class="c-testemonials-slider__bttn__target" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                  </div>
+                  <figure class="c-testemonials-slider__bttn__ico">
+                    <div class="c-testemonials-slider__bttn__ico__emb w-embed">
+                      <svg width="100%" height="100%" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.7583 8.70711C20.1488 8.31658 20.1488 7.68342 19.7583 7.29289L13.3943 0.928932C13.0038 0.538408 12.3706 0.538408 11.9801 0.928932C11.5896 1.31946 11.5896 1.95262 11.9801 2.34315L17.6369 8L11.9801 13.6569C11.5896 14.0474 11.5896 14.6805 11.9801 15.0711C12.3706 15.4616 13.0038 15.4616 13.3943 15.0711L19.7583 8.70711ZM0.0511475 9H19.0511V7H0.0511475V9Z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-pagination c-testemonials-slider__fraction swiper-pagination-fraction swiper-pagination-horizontal">
+                <span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">4</span>
+              </div>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+          <div class="c-testemonials-slider__border"></div>
+        </div>
+      </div>
+    </section>
+    <section class="o-section is--pt-180--z-3 md--pt-128 sm--pt-96 wf-section">
+      <figure class="c-section-rec-bg"></figure>
+      <figure class="c-section-drnd-rec-2"></figure>
+      <div class="o-container w-container">
+        <div class="o-flex-ssbw md--vflex">
+          <div data-w-id="e1757b92-d536-4795-d617-9d2a5012213b" class="c-pls-infos is--large u-anim md--l844x844 sm--l942x942--centered">
+            <figure class="c-pls-infos__target-l1 sm--none" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              <div class="o-emb w-embed">
+                <svg width="100%" height="100%" viewBox="0 0 999 1007" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.1" d="M998.178 503.093C998.178 780.671 774.836 1005.69 499.339 1005.69C223.841 1005.69 0.5 780.671 0.5 503.093C0.5 225.515 223.841 0.5 499.339 0.5C774.836 0.5 998.178 225.515 998.178 503.093Z" stroke="url(#paint0_linear)"></path>
+                  <defs>
+                    <linearGradient id="paint0_linear" x1="499.339" y1="0" x2="499.339" y2="1006.19" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#EA622B" stop-opacity="0.3"></stop>
+                      <stop offset="1" stop-color="#EA622B"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </figure>
+            <figure class="c-pls-infos__target-l2 is--large sm--none" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              <div class="o-emb w-embed">
+                <svg width="100%" height="100%" viewBox="0 0 795 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.16" d="M794.49 399.817C794.49 620.027 616.815 798.538 397.646 798.538C178.478 798.538 0.802734 620.027 0.802734 399.817C0.802734 179.607 178.478 1.09619 397.646 1.09619C616.815 1.09619 794.49 179.607 794.49 399.817Z" stroke="url(#paint0_linear)"></path>
+                  <defs>
+                    <linearGradient id="paint0_linear" x1="397.646" y1="0.596191" x2="397.646" y2="799.038" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#EA622B" stop-opacity="0.3"></stop>
+                      <stop offset="1" stop-color="#EA622B"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </figure>
+            <figure class="c-pls-infos__target-l3 is--large" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              <div class="o-emb w-embed">
+                <svg width="100%" height="100%" viewBox="0 0 577 582" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3" d="M576.482 290.802C576.482 450.881 447.552 580.645 288.516 580.645C129.481 580.645 0.55127 450.881 0.55127 290.802C0.55127 130.724 129.481 0.959778 288.516 0.959778C447.552 0.959778 576.482 130.724 576.482 290.802Z" stroke="url(#paint0_linear)"></path>
+                  <defs>
+                    <linearGradient id="paint0_linear" x1="288.516" y1="0.459778" x2="288.516" y2="581.145" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#EA622B" stop-opacity="0.3"></stop>
+                      <stop offset="1" stop-color="#EA622B"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </figure>
+            <figure class="c-pls-infos__target-l4 is--large" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              <div class="o-emb w-embed">
+                <svg width="100%" height="100%" viewBox="0 0 392 395" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.4" d="M390.551 197.46C390.551 305.987 303.243 393.96 195.551 393.96C87.8593 393.96 0.55127 305.987 0.55127 197.46C0.55127 88.9322 87.8593 0.959717 195.551 0.959717C303.243 0.959717 390.551 88.9322 390.551 197.46Z" stroke="url(#paint0_linear)"></path>
+                  <defs>
+                    <linearGradient id="paint0_linear" x1="195.551" y1="0.459717" x2="195.551" y2="394.46" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#EA622B" stop-opacity="0.3"></stop>
+                      <stop offset="1" stop-color="#EA622B"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </figure>
+            <figure class="c-pls-infos__target-l5" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              <div class="o-emb w-embed">
+                <svg width="100%" height="100%" viewBox="0 0 251 252" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.4" d="M249.551 125.96C249.551 194.997 193.809 250.96 125.051 250.96C56.2937 250.96 0.55127 194.997 0.55127 125.96C0.55127 56.9222 56.2937 0.959717 125.051 0.959717C193.809 0.959717 249.551 56.9222 249.551 125.96Z" stroke="url(#paint0_linear)"></path>
+                  <defs>
+                    <linearGradient id="paint0_linear" x1="125.051" y1="0.459717" x2="125.051" y2="251.46" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#EA622B" stop-opacity="0.3"></stop>
+                      <stop offset="1" stop-color="#EA622B"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </figure>
+            <figure class="c-pls-infos__target-l6" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+              <div class="o-emb w-embed">
+                <svg width="100%" height="100%" viewBox="0 0 162 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.4" d="M160.551 81.4597C160.551 125.922 124.731 161.96 80.5513 161.96C36.3714 161.96 0.55127 125.922 0.55127 81.4597C0.55127 36.9979 36.3714 0.959717 80.5513 0.959717C124.731 0.959717 160.551 36.9979 160.551 81.4597Z" stroke="url(#paint0_linear)"></path>
+                  <defs>
+                    <linearGradient id="paint0_linear" x1="80.5513" y1="0.459717" x2="80.5513" y2="162.46" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#EA622B" stop-opacity="0.3"></stop>
+                      <stop offset="1" stop-color="#EA622B"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </figure>
+            <figure class="c-pls-infos__hero-1">
+              <img src="./assets/software-1.png" loading="lazy" alt="" class="o-img">
+            </figure>
+            <figure class="c-pls-infos__hero-2">
+              <img src="./assets/code.png" loading="lazy" alt="" class="o-img">
+            </figure>
+            <figure class="c-pls-infos__hero-3">
+              <img src="./assets/js.png" loading="lazy" alt="" class="o-img"
+                style="border-radius: 50%;">
+            </figure>
+            <figure class="c-pls-infos__hero-4">
+              <img src="./assets/php.png" loading="lazy" alt="" class="o-img">
+            </figure>
+            <figure class="c-pls-infos__hero-5">
+              <img src="./assets/go.png" loading="lazy" alt="" class="o-img" style="left: 42.8rem;">
+            </figure>
+          </div>
+          <div class="o-l510 is--mt-154--z-4 md--1st sm--mt-48--auto">
+            <h2 class="o-h-40">Main <span class="o-h-40--orange">software languages</span>:</h2>
+            <div class="o-flex-ss is--mt-44 md--mt-32">
+              <figure class="c-p-baseline"></figure>
+              <div class="o-l368 sm--100">
+                <ul>
+                  <li><span class="o-h-40--orange">Go (Golang)</span> <- Main language</li>
+                  <li>PHP</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="o-flex-ssbw is--mt-45 md--obo sm--mt-n96" style="padding-bottom: 5rem;">
+          <div class="o-l483 is--mt-188--z-4 md--mt-0 sm--100">
+            <h2 class="o-h-40">Some software <span class="o-h-40--orange">tecnologies</span></h2>
+            <div class="o-flex-ss is--mt-44 md--mt-32">
+              <figure class="c-p-baseline"></figure>
+              <div class="o-l368 sm--100">
+                <p style="padding-bottom: 5rem;">
+                  HTML, CSS, Laravel (PHP), Cake (PHP), OJS (PHP), Node.js, Express.js, Ruby On Rails, postgres, mysql,
+                  git, github, gitlab, bitbucket, heroku, digital ocean, aws, aws messages,
+                  aws sqs, aws sns, jira, asana, trello, monoliths, microservices, API, docker, linux, ubuntu, vba, MS
+                  office suit, appsmith, etc.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="o-section is--z-2 wf-section">
+      <figure class="c-section-rec-bg"></figure>
+      <div class="o-container w-container">
+        <div class="c-pls-ab u-anim md sm--centered">
+          <figure class="c-pls-ab__target-1" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+          </figure>
+          <figure class="c-pls-ab__target-2" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+          </figure>
+          <figure class="c-pls-ab__target-3" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+          </figure>
+          <div class="c-pls-ab__infos">
+            <h2 class="o-h-48">Download <span class="o-h-40--orange"> resume</span> here!</h2>
+            <div class="o-l323 is--mt-40 sm--auto">
+              <div class="o-layout">
+                <a href="../assets/Pedro_Jose_Bidoggia_Resume_english.pdf" download="" target="_blank" class="c-cta u-anim w-inline-block" style="transform: translate3d(0px, 25%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                  <div class="c-cta__target"></div>
+                  <div class="c-cta__target__hover" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></div>
+                  <div class="c-cta__infos">
+                    <figure class="c-cta__infos__img">
+                      <img src="./assets/download.png" loading="eager" alt="" class="o-img is--cover">
+                    </figure>
+                    <div class="o-cta-txt u-hover-anim">
+                      Download
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section  id="contact" class="o-section wf-section">
+      <figure class="c-section-rec-bg"></figure>
+      <div class="o-container w-container">
+        <div class="o-layout is--py-100--pl-100--pr-118 md--p-64 sm">
+          <div class="c-rec-bg-orange"></div>
+          <div class="o-flex-ssbw md--obo">
+            <div class="o-l410 is--z-4 md--l450 sm--auto">
+              <div class="o-flex-cs">
+                <figure class="c-star-ico">
+                  <div class="c-star-ico__emb is--white-opc w-embed"><svg width="100%" height="100%" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.0198 4.26741C11.9407 4.02876 11.7252 3.85981 11.4713 3.83724L8.00721 3.52837L6.6382 0.380532C6.53712 0.149263 6.30714 0 6.05115 0C5.79517 0 5.56509 0.149263 5.46466 0.380532L4.09565 3.52837L0.631059 3.83724C0.377087 3.86026 0.162027 4.02921 0.0825578 4.26741C0.00354657 4.50605 0.0765152 4.7678 0.268596 4.93325L2.88714 7.18829L2.11506 10.528C2.05857 10.7736 2.15562 11.0275 2.36308 11.1748C2.47459 11.2544 2.60561 11.2941 2.73708 11.2941C2.85006 11.2941 2.96313 11.2646 3.06411 11.2053L6.05115 9.45116L9.03765 11.2053C9.25674 11.3339 9.53223 11.3221 9.73923 11.1748C9.94669 11.0275 10.0437 10.7736 9.98725 10.528L9.21517 7.18829L11.8337 4.93325C12.0257 4.7678 12.0988 4.50659 12.0198 4.26741Z" fill="currentColor"></path>
+                    </svg></div>
+                </figure>
+                <h4 class="o-h-12 is--white-opc">Contact</h4>
+              </div>
+              <div class="o-layout is--mt-16">
+                <h2 class="o-h-40 is--white">Contact data</h2>
+              </div>
+              <div class="o-flex-ss is--mt-44 md--mt-32">
+                <figure class="c-p-baseline is--white-opc"></figure>
+                <div class="o-l325">
+                  <p class="o-txt-14 is--white u-anim">
+                    <span class="u-txt-line-1" style="transform: translate3d(0px, 100%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                      Here you will find some
+                    </span>
+                    <span class="u-txt-line-2" style="transform: translate3d(0px, 100%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                      forms of communication
+                    </span>
+                    <span class="u-txt-line-3" style="transform: translate3d(0px, 100%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                      choose the one you prefer.
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="o-layout is--mt-56--ml-71--lh-1 md--mt-48--ml-88 sm--ml-0">
+                <a href="" class="c-cta--invert u-anim w-inline-block" style="transform: translate3d(0px, 25%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                  <div class="c-cta__target is--white"></div>
+                  <div class="c-cta__target__hover is--black" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                  </div>
+                  <div class="c-cta__infos">
+                    <figure class="c-cta__infos__img">
+                      <img src="./assets/tumblr_81c455e9a8443e0e7773e23cbb8034a7_7854114c_500.gif" loading="eager" alt="" class="o-img is--cover" width="40" style="border-radius: 50%;">
+                    </figure>
+                    <div class="o-cta-txt is--black u-hover-anim">Here I am</div>
+                    <figure class="c-cta__infos__ico">
+                      <div class="c-cta__infos__ico-wrap">
+                        <div class="c-cta__infos__ico__emb is--orange w-embed">
+                          <svg width="100%" height="100%" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.7071 7.29289C17.0976 7.68342 17.0976 8.31658 16.7071 8.70711L10.3431 15.0711C9.95262 15.4616 9.31946 15.4616 8.92893 15.0711C8.53841 14.6805 8.53841 14.0474 8.92893 13.6569L14.5858 8L8.92893 2.34315C8.53841 1.95262 8.53841 1.31946 8.92893 0.928931C9.31946 0.538407 9.95262 0.538407 10.3431 0.928931L16.7071 7.29289ZM-8.74228e-08 7L16 7L16 9L8.74228e-08 9L-8.74228e-08 7Z" fill="currentColor"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="c-cta__infos__ico-wrap u-hover" style="transform: translate3d(-100%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                        <div class="c-cta__infos__ico__emb is--orange w-embed">
+                          <svg width="100%" height="100%" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.7071 7.29289C17.0976 7.68342 17.0976 8.31658 16.7071 8.70711L10.3431 15.0711C9.95262 15.4616 9.31946 15.4616 8.92893 15.0711C8.53841 14.6805 8.53841 14.0474 8.92893 13.6569L14.5858 8L8.92893 2.34315C8.53841 1.95262 8.53841 1.31946 8.92893 0.928931C9.31946 0.538407 9.95262 0.538407 10.3431 0.928931L16.7071 7.29289ZM-8.74228e-08 7L16 7L16 9L8.74228e-08 9L-8.74228e-08 7Z" fill="currentColor"></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                </a></div>
+            </div>
+            <div class="o-l392 is--z-4 md--ml-88--mt-64 sm--ml-0--mt-48--auto" style="width: 100%;">
+              <div class="o-flex-ss">
+                <div class="c-pls-ico--small u-anim sm">
+                  <figure class="c-pls-ico__infos--small is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                    <figure class="c-pls-ico__infos__item--small">
+                      <img src="./assets/linkedin.png" loading="eager" alt="" class="o-img">
+                    </figure>
+                  </figure>
+                  <figure class="c-pls-ico__target-1" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                  </figure>
+                  <figure class="c-pls-ico__target-2--small" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                  </figure>
+                </div>
+                <div class="o-l253 is--shrink--mt-18">
+                  <h3 class="o-h-16--semi is--white u-anim">
+                    Linkedin: <a href="https://linkedin.com/in/pedrojosebidoggia" target="_blank">pedrojosebidoggia</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="o-flex-ss is--mt-35">
+                <div class="c-pls-ico--small u-anim sm">
+                  <figure class="c-pls-ico__infos--small is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                    <figure class="c-pls-ico__infos__item--small">
+                      <img src="./assets/phone.png" loading="eager" alt="" class="o-img">
+                    </figure>
+                  </figure>
+                  <figure class="c-pls-ico__target-1" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                  </figure>
+                  <figure class="c-pls-ico__target-2--small" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                  </figure>
+                </div>
+                <div class="o-l253 is--shrink--mt-18">
+                  <h3 class="o-h-16--semi is--white u-anim">
+                    Phone:
+                    <a href="tel:+5491136397578">+54 911 3639 7578</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="o-flex-ss is--mt-35">
+                <div class="c-pls-ico--small u-anim sm">
+                  <figure class="c-pls-ico__infos--small is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                    <figure class="c-pls-ico__infos__item--small is--ml-4--mb-2">
+                      <img src="./assets/email.jpg" loading="eager" alt="" class="o-img">
+                    </figure>
+                  </figure>
+                  <figure class="c-pls-ico__target-1" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                  </figure>
+                  <figure class="c-pls-ico__target-2--small" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                  </figure>
+                </div>
+                <div class="o-l253 is--shrink--mt-18" style="width: 34rem;">
+                  <h3 class="o-h-16--semi is--white u-anim">
+                    E-mail:
+                    <a href="mailto:pedro.jose.bidoggia@gmail.com">pedro.jose.bidoggia@gmail.com</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="o-flex-ss is--mt-35">
+                <div class="c-pls-ico--small u-anim sm">
+                  <figure class="c-pls-ico__infos--small is--white" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                    <figure class="c-pls-ico__infos__item--small">
+                      <img src="./assets/github.png" loading="eager" alt="" class="o-img">
+                    </figure>
+                  </figure>
+                  <figure class="c-pls-ico__target-1" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                  </figure>
+                  <figure class="c-pls-ico__target-2--small" style="transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                  </figure>
+                </div>
+                <div class="o-l253 is--shrink--mt-18">
+                  <h3 class="o-h-16--semi is--white u-anim">
+                    Github:
+                    <a href="https://github.com/3lm0n0">3lm0n0</a>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figure class="c-bh-section-rec-bg"></figure>
+      <figure class="c-th-section-rec-bg is--white"></figure>
+      <figure class="c-section-rnd-rec"></figure>
+    </section>
+    <section class="o-section wf-section">
+      <figure class="c-section-rec-bg is--white"></figure>
+      <div class="o-container w-container">
+        <div class="o-flex-ssbw is--mt-158--mb-140 md--my-64--obo--px-64 sm--my-48--px-0 u-centered">
+          <div class="o-l483 sm--auto">
+            <div class="o-flex-cs">
+              <figure class="c-star-ico">
+                <div class="c-star-ico__emb w-embed">
+                  <svg width="100%" height="100%" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.0198 4.26741C11.9407 4.02876 11.7252 3.85981 11.4713 3.83724L8.00721 3.52837L6.6382 0.380532C6.53712 0.149263 6.30714 0 6.05115 0C5.79517 0 5.56509 0.149263 5.46466 0.380532L4.09565 3.52837L0.631059 3.83724C0.377087 3.86026 0.162027 4.02921 0.0825578 4.26741C0.00354657 4.50605 0.0765152 4.7678 0.268596 4.93325L2.88714 7.18829L2.11506 10.528C2.05857 10.7736 2.15562 11.0275 2.36308 11.1748C2.47459 11.2544 2.60561 11.2941 2.73708 11.2941C2.85006 11.2941 2.96313 11.2646 3.06411 11.2053L6.05115 9.45116L9.03765 11.2053C9.25674 11.3339 9.53223 11.3221 9.73923 11.1748C9.94669 11.0275 10.0437 10.7736 9.98725 10.528L9.21517 7.18829L11.8337 4.93325C12.0257 4.7678 12.0988 4.50659 12.0198 4.26741Z" fill="#C0C7CD"></path>
+                  </svg>
+                </div>
+              </figure>
+              <h4 class="o-h-12">Location</h4>
+            </div>
+            <div class="o-layout is--mt-16">
+              <h2 class="o-h-40"><span class="o-h-40--orange">Where I'm from?</span></h2>
+            </div>
+            <div class="o-flex-ss is--mt-44 md--mt-32">
+              <figure class="c-p-baseline"></figure>
+              <div class="o-l368 sm--100">
+                <p class="o-txt-16 u-anim">
+                  I currently live in Buenos Aires, Argentina.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="o-l510 md--mt-32 sm--auto-center">
+            <div class="c-form w-form" style="padding: 0.8rem;">
+              <iframe style="border-radius: 3rem;border-style: none;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.441206264462!2d-58.895467669572724!3d-34.39012999140192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb629093779a65%3A0xb90e351d714562ec!2sAlmte.%20Guillermo%20Brown%2C%20Villa%20Rosa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1661885913996!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div style="padding: 5rem; text-align: center;">
+        <div class="">
+          <span href="#form" data-w-id="e63d9a62-12be-1e2f-6f60-f2d9fba372e8" style="opacity: 1; transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;" class="c-cta w-inline-block">
+            <div class="c-cta__target" style="background-color: #fff;"></div>
+            <div class="c-cta__target__hover" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"></div>
+            <div class="c-cta__infos">
+              <figure class="c-cta__infos__img"><img loading="eager" alt="" class="o-img is--cover" width="40" src="./assets/png-transparent-astronauts-from-space-astronaut-spacewalk-un.png">
+              </figure>
+              <div class="o-cta-txt u-hover-anim" style="color: #000;">Goodbye voyager!</div>
+            </div>
+          </span>
+        </div>
+        </div>
+    </section>
+    <footer class="o-section is--pt-46--pb-80 md wf-section">
+      <figure class="c-section-rec-bg is--white"></figure>
+      <div class="o-container w-container">
+        <div class="o-flex-csbw sm-vflex">
+          <figure class="c-logo">
+            <div class="c-nav__logo__emb w-embed">
+              <img alt=">_3lm0n0" style="border-radius: 50%;" src="./assets/3lm0n0-transformed.png">
+            </div>
+          </figure>
+          <div class="o-l650 md-50">
+            <div class="o-l650__flex-csb sm-vflex">
+              <div class="c-copyright">
+                <div class="c-copyright__item">
+                  Made with <span style="color: red;">&#10084;</span> by
+                  <a taget="_blank" rel="noopener" href="https://github.com/3lm0n0" target="_blank" style="color: #EA622B;text-decoration: none;">3lm0n0</a>
+                </div>
+              </div><a href="#main" class="c-ttop-bttn w-inline-block w--current">
+                <div class="c-ttop-bttn__target"></div>
+                <div class="c-ttop-bttn__hover" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                </div>
+                <figure class="c-ttop-bttn__ico">
+                  <div class="c-ttop-bttn__ico-wrap">
+                    <div class="c-ttop-bttn__ico__emb w-embed">
+                      <svg width="100%" height="100%" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5816 0.46967C6.28871 0.176777 5.81383 0.176777 5.52094 0.46967L0.747969 5.24264C0.455075 5.53553 0.455075 6.01041 0.747969 6.3033C1.04086 6.59619 1.51574 6.59619 1.80863 6.3033L6.05127 2.06066L10.2939 6.3033C10.5868 6.59619 11.0617 6.59619 11.3546 6.3033C11.6475 6.01041 11.6475 5.53553 11.3546 5.24264L6.5816 0.46967ZM6.80127 13L6.80127 1H5.30127L5.30127 13H6.80127Z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="c-ttop-bttn__ico-wrap u-hover" style="transform: translate3d(0px, 100%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
+                    <div class="c-ttop-bttn__ico__emb w-embed">
+                      <svg width="100%" height="100%" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5816 0.46967C6.28871 0.176777 5.81383 0.176777 5.52094 0.46967L0.747969 5.24264C0.455075 5.53553 0.455075 6.01041 0.747969 6.3033C1.04086 6.59619 1.51574 6.59619 1.80863 6.3033L6.05127 2.06066L10.2939 6.3033C10.5868 6.59619 11.0617 6.59619 11.3546 6.3033C11.6475 6.01041 11.6475 5.53553 11.3546 5.24264L6.5816 0.46967ZM6.80127 13L6.80127 1H5.30127L5.30127 13H6.80127Z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </figure>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script src="./assets/javascript.js"></script>
+  <script src="./assets/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".c-testemonials-slider", {
+      grabCursor: true,
+      spaceBetween: 200,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+</body>
+
+</html>
