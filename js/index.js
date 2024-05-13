@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var language = document.getElementById("language-selector");
 
   language.addEventListener('change', function () {
-    url = window.location.href.split("/resume/")[1];
+    url = window.location.href.split("/MyCV/")[1];
     if (language.value == "ES" && url == "theme-1/index.html") {
       window.location.href = "./es/index.html";
     }

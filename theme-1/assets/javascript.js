@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log(language.value);
     console.log(window.location.href);
     url = window.location.href;
-    url = url.split("/resume/")[1];
+    url = url.split("/MyCV/")[1];
     console.log(url);
     if (language.value == "ES" && (url == "index.html" || url == "theme-1/index.html")) {
       window.location.href = "./es/index.html";
