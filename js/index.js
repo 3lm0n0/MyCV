@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   language.addEventListener('change', function () {
     url = window.location.href.split("/MyCV/")[1];
-    if (language.value == "ES" && url == "") {
-      window.location.href = "./es/index.html";
+    if (language.value == "ES" && (url == "" || url == "index.html")) {
+      window.location.href = "./theme-1/es/index.html";
     }
-	if (language.value == "ES" && url == "index.html") {
+	  if (language.value == "ES" && url == "theme-1/index.html") {
       window.location.href = "./theme-1/es/index.html";
     }
     if (language.value == "EN" && url == "theme-1/es/index.html") {
