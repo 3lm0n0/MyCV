@@ -15,11 +15,32 @@
 </head>
 
 <body>
-  <label class="switch">
-    <input type="checkbox" checked>
-    <span class="slider round"></span>
-    <p style="color: #fff;">Change theme</p>
-  </label>
+  
+  <div class="configuration">
+    <div style="padding: 0.4rem;">
+      <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider round"></span>
+      </label>
+      <p style="color: #fff;">Change theme</p>
+    </div>
+    <div class="container__language">
+      <div class="main__language">
+        <div class="select__language">
+          <span class="select__flag__language" aria-hidden="true"></span>
+          <select class="select__input__language" name="language-selector" id="language-selector">
+            <option value="0">Select Language</option>
+            <option value="EN">English</option>
+            <option value="ES">Español</option>
+          </select>
+          <svg class="select__arrow__language" aria-hidden="true" viewBox="0 0 16 16">
+            <polyline points="3.5,6.5 8,11 12.5,6.5" stroke-width="2" fill="none" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round"></polyline>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
   
   <div class="parallax nyc hero" data-parallax-speed="1">
   <div class="hero-content">
