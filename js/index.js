@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   language.addEventListener('change', function () {
     url = window.location.href.split("/MyCV/")[1];
-    if (language.value == "ES" && url == "theme-1/index.html") {
+    if (language.value == "ES" && url == "") {
       window.location.href = "./es/index.html";
     }
   });
