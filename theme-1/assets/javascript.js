@@ -52,13 +52,12 @@ document.addEventListener('DOMContentLoaded', function () {
   var language = document.getElementById("language-selector");
 
   language.addEventListener('change', function () {
-    console.log(language.value);
-    console.log(window.location.href);
-    url = window.location.href;
-    url = url.split("/MyCV/")[1];
-    console.log(url);
-    if (language.value == "ES" && (url == "index.html" || url == "theme-1/index.html")) {
+    url = window.location.href.split("/MyCV/")[1];
+    if (language.value == "ES" && url == "") {
       window.location.href = "./es/index.html";
+    }
+	if (language.value == "ES" && url == "index.html") {
+      window.location.href = "./theme-1/es/index.html";
     }
     if (language.value == "EN" && url == "theme-1/es/index.html") {
       window.location.href = "../index.html";

@@ -20,12 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (language.value == "ES" && url == "theme-1/index.html") {
       window.location.href = "./es/index.html";
     }
-	if (language.value == "ES" && url == "index.html") {
-      window.location.href = "./theme-1/es/index.html";
-    }
-    if (language.value == "EN" && url == "theme-1/es/index.html") {
-      window.location.href = "../index.html";
-    }
   });
 
 });
